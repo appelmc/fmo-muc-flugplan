@@ -31,6 +31,7 @@ UA = "Mozilla/5.0 (compatible; fmo-muc-schedule/1.0)"
 TZ = ZoneInfo("Europe/Berlin")
 DEFAULT_WEEKS = 52  # maximales Fenster: die Quelle ist ueberall dieselbe
 CONFIRM_DAYS = 14   # nur die ersten zwei Wochen werden gegen MUC gegengeprueft
+CONFIRMED_MARK = "✅"  # Kennzeichen im Termintitel (aenderbar per --marker)
 
 # Flugtafel des Flughafens Muenchen (Zweitquelle, kein Schluessel noetig).
 MUC_BOARD = "https://www.munich-airport.com/flightsearch/{direction}"
@@ -291,7 +292,8 @@ def fold(line: str) -> str:
 
 
 def build_ics(flights: list[dict], keep_past: bool = False,
-              confirmed: set | None = None, zusatz: dict | None = None) -> str:
+              confirmed: set | None = None, zusatz: dict | None = None,
+              mark: str = CONFIRMED_MARK) -> str:
     now = dt.datetime.now(dt.timezone.utc)
     today = now.astimezone(TZ).date()
     events = []
@@ -334,7 +336,7 @@ def build_ics(flights: list[dict], keep_past: bool = False,
         ist_bestaetigt = bool(confirmed) and key in confirmed
         info = (zusatz or {}).get(key, {})
         uid = f"{uid_key}@fmo-muc-schedule"
-        summary = f'{f["flight"]} {f["from"]}→{f["to"]}' + (" [bestätigt]" if ist_bestaetigt else "")
+        summary = f'{f["flight"]} {f["from"]}→{f["to"]}' + (f" {mark}" if ist_bestaetigt else "")
         bestaetigung = ""
         if ist_bestaetigt:
             muster = (f', Flugzeugtyp laut Münchener Tafel: {info["aircraft"]}'
@@ -370,7 +372,7 @@ def build_ics(flights: list[dict], keep_past: bool = False,
         "CALSCALE:GREGORIAN",
         "METHOD:PUBLISH",
         "X-WR-CALNAME:FMO ⇄ MUC Flugplan (Lufthansa)",
-        "X-WR-CALDESC:Planmäßige Verbindungen Münster/Osnabrück (FMO) ⇄ München (MUC), beide Richtungen. Quelle: Flugplan fmo.de, täglich neu erzeugt. Termine mit [bestätigt] stehen zusätzlich auf der Flugtafel des Flughafens München. Planzeiten ohne Gewähr – keine Buchung, keine Verfügbarkeit.",
+        "X-WR-CALDESC:Planmäßige Verbindungen Münster/Osnabrück (FMO) ⇄ München (MUC), beide Richtungen. Quelle: Flugplan fmo.de, täglich neu erzeugt. Termine mit ✅ stehen zusätzlich auf der Flugtafel des Flughafens München. Planzeiten ohne Gewähr – keine Buchung, keine Verfügbarkeit.",
         "X-WR-TIMEZONE:Europe/Berlin",
         "REFRESH-INTERVAL;VALUE=DURATION:PT12H",
         "X-PUBLISHED-TTL:PT12H",
@@ -386,6 +388,8 @@ def main() -> int:
                     help=f"Reichweite ab morgen in Wochen (Standard {DEFAULT_WEEKS})")
     ap.add_argument("--confirm-days", type=int, default=CONFIRM_DAYS,
                     help=f"Wie viele Tage gegen die Muenchener Tafel geprueft werden (Standard {CONFIRM_DAYS})")
+    ap.add_argument("--marker", default=CONFIRMED_MARK,
+                    help=f"Kennzeichen fuer bestaetigte Fluege im Termintitel (Standard {CONFIRMED_MARK!r})")
     ap.add_argument("--keep-past", action="store_true")
     args = ap.parse_args()
 
@@ -398,7 +402,8 @@ def main() -> int:
           f"{args.confirm_days}-Tage-Fenster."
           + (f" Hinweis: {hinweis}" if hinweis else ""))
 
-    ics = build_ics(flights, keep_past=args.keep_past, confirmed=confirmed, zusatz=zusatz)
+    ics = build_ics(flights, keep_past=args.keep_past, confirmed=confirmed, zusatz=zusatz,
+                    mark=args.marker)
     with open(args.out, "w", encoding="utf-8", newline="") as fh:
         fh.write(ics)
     days = sorted({f["date"] for f in flights})
