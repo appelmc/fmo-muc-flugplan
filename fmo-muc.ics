@@ -1,0 +1,1901 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//hermes-agent//fmo-muc-flight-schedule//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:FMO ⇄ MUC Flugplan (Lufthansa)
+X-WR-CALDESC:Planmäßige Lufthansa-Verbindungen Münster/Osnabrück (FMO) ⇄ München (MUC). Quelle: fmo.de. Ohne Gewähr.
+X-WR-TIMEZONE:Europe/Berlin
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:2026-10-08-FMOMUC-LH2143@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261008T040500Z
+DTEND:20261008T052000Z
+SUMMARY:LH 2143 FMO→MUC
+DESCRIPTION:Lufthansa · LH 2143 · FMO → MUC\\nAbflug 06:05 Uhr\, Ankun
+ ft 07:20 Uhr (Ortszeit)\\nVerkehrstag: Donnerstag\\nQuelle: https://www.fm
+ o.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UT
+ C.\\nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern.
+  Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-08-MUCFMO-LH2138@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261008T133000Z
+DTEND:20261008T144000Z
+SUMMARY:LH 2138 MUC→FMO
+DESCRIPTION:Lufthansa · LH 2138 · MUC → FMO\\nAbflug 15:30 Uhr\, Ankun
+ ft 16:40 Uhr (Ortszeit)\\nVerkehrstag: Donnerstag\\nQuelle: https://www.fm
+ o.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UT
+ C.\\nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern.
+  Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-08-FMOMUC-LH2139@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261008T152000Z
+DTEND:20261008T163000Z
+SUMMARY:LH 2139 FMO→MUC
+DESCRIPTION:Lufthansa · LH 2139 · FMO → MUC\\nAbflug 17:20 Uhr\, Ankun
+ ft 18:30 Uhr (Ortszeit)\\nVerkehrstag: Donnerstag\\nQuelle: https://www.fm
+ o.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UT
+ C.\\nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern.
+  Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-08-MUCFMO-LH2142@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261008T195000Z
+DTEND:20261008T210000Z
+SUMMARY:LH 2142 MUC→FMO
+DESCRIPTION:Lufthansa · LH 2142 · MUC → FMO\\nAbflug 21:50 Uhr\, Ankun
+ ft 23:00 Uhr (Ortszeit)\\nVerkehrstag: Donnerstag\\nQuelle: https://www.fm
+ o.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UT
+ C.\\nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern.
+  Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-09-FMOMUC-LH2143@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261009T040500Z
+DTEND:20261009T052000Z
+SUMMARY:LH 2143 FMO→MUC
+DESCRIPTION:Lufthansa · LH 2143 · FMO → MUC\\nAbflug 06:05 Uhr\, Ankun
+ ft 07:20 Uhr (Ortszeit)\\nVerkehrstag: Freitag\\nQuelle: https://www.fmo.d
+ e/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\
+ \nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Ke
+ ine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-09-MUCFMO-LH2138@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261009T133000Z
+DTEND:20261009T144000Z
+SUMMARY:LH 2138 MUC→FMO
+DESCRIPTION:Lufthansa · LH 2138 · MUC → FMO\\nAbflug 15:30 Uhr\, Ankun
+ ft 16:40 Uhr (Ortszeit)\\nVerkehrstag: Freitag\\nQuelle: https://www.fmo.d
+ e/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\
+ \nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Ke
+ ine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-09-FMOMUC-LH2139@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261009T152000Z
+DTEND:20261009T163000Z
+SUMMARY:LH 2139 FMO→MUC
+DESCRIPTION:Lufthansa · LH 2139 · FMO → MUC\\nAbflug 17:20 Uhr\, Ankun
+ ft 18:30 Uhr (Ortszeit)\\nVerkehrstag: Freitag\\nQuelle: https://www.fmo.d
+ e/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\
+ \nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Ke
+ ine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-09-MUCFMO-LH2142@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261009T195000Z
+DTEND:20261009T210000Z
+SUMMARY:LH 2142 MUC→FMO
+DESCRIPTION:Lufthansa · LH 2142 · MUC → FMO\\nAbflug 21:50 Uhr\, Ankun
+ ft 23:00 Uhr (Ortszeit)\\nVerkehrstag: Freitag\\nQuelle: https://www.fmo.d
+ e/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\
+ \nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Ke
+ ine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-10-FMOMUC-LH2143@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261010T040500Z
+DTEND:20261010T052000Z
+SUMMARY:LH 2143 FMO→MUC
+DESCRIPTION:Lufthansa · LH 2143 · FMO → MUC\\nAbflug 06:05 Uhr\, Ankun
+ ft 07:20 Uhr (Ortszeit)\\nVerkehrstag: Samstag\\nQuelle: https://www.fmo.d
+ e/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\
+ \nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Ke
+ ine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-10-MUCFMO-LH2142@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261010T195000Z
+DTEND:20261010T210000Z
+SUMMARY:LH 2142 MUC→FMO
+DESCRIPTION:Lufthansa · LH 2142 · MUC → FMO\\nAbflug 21:50 Uhr\, Ankun
+ ft 23:00 Uhr (Ortszeit)\\nVerkehrstag: Samstag\\nQuelle: https://www.fmo.d
+ e/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\
+ \nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Ke
+ ine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-11-FMOMUC-LH2143@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261011T040500Z
+DTEND:20261011T052000Z
+SUMMARY:LH 2143 FMO→MUC
+DESCRIPTION:Lufthansa · LH 2143 · FMO → MUC\\nAbflug 06:05 Uhr\, Ankun
+ ft 07:20 Uhr (Ortszeit)\\nVerkehrstag: Sonntag\\nQuelle: https://www.fmo.d
+ e/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\
+ \nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Ke
+ ine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-11-MUCFMO-LH2140@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261011T154000Z
+DTEND:20261011T165000Z
+SUMMARY:LH 2140 MUC→FMO
+DESCRIPTION:Lufthansa · LH 2140 · MUC → FMO\\nAbflug 17:40 Uhr\, Ankun
+ ft 18:50 Uhr (Ortszeit)\\nVerkehrstag: Sonntag\\nQuelle: https://www.fmo.d
+ e/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\
+ \nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Ke
+ ine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-11-FMOMUC-LH2141@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261011T173000Z
+DTEND:20261011T184000Z
+SUMMARY:LH 2141 FMO→MUC
+DESCRIPTION:Lufthansa · LH 2141 · FMO → MUC\\nAbflug 19:30 Uhr\, Ankun
+ ft 20:40 Uhr (Ortszeit)\\nVerkehrstag: Sonntag\\nQuelle: https://www.fmo.d
+ e/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\
+ \nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Ke
+ ine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-11-MUCFMO-LH2142@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261011T195000Z
+DTEND:20261011T210000Z
+SUMMARY:LH 2142 MUC→FMO
+DESCRIPTION:Lufthansa · LH 2142 · MUC → FMO\\nAbflug 21:50 Uhr\, Ankun
+ ft 23:00 Uhr (Ortszeit)\\nVerkehrstag: Sonntag\\nQuelle: https://www.fmo.d
+ e/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\
+ \nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Ke
+ ine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-12-FMOMUC-LH2143@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261012T040500Z
+DTEND:20261012T052000Z
+SUMMARY:LH 2143 FMO→MUC
+DESCRIPTION:Lufthansa · LH 2143 · FMO → MUC\\nAbflug 06:05 Uhr\, Ankun
+ ft 07:20 Uhr (Ortszeit)\\nVerkehrstag: Montag\\nQuelle: https://www.fmo.de
+ /muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\\
+ nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Kei
+ ne Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-12-MUCFMO-VL2138@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261012T133000Z
+DTEND:20261012T144000Z
+SUMMARY:VL 2138 MUC→FMO
+DESCRIPTION:Lufthansa City Airlines · VL 2138 · MUC → FMO\\nAbflug 15:
+ 30 Uhr\, Ankunft 16:40 Uhr (Ortszeit)\\nVerkehrstag: Montag\\nQuelle: http
+ s://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.202
+ 6 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können sic
+ h ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-12-FMOMUC-VL2139@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261012T152000Z
+DTEND:20261012T162500Z
+SUMMARY:VL 2139 FMO→MUC
+DESCRIPTION:Lufthansa City Airlines · VL 2139 · FMO → MUC\\nAbflug 17:
+ 20 Uhr\, Ankunft 18:25 Uhr (Ortszeit)\\nVerkehrstag: Montag\\nQuelle: http
+ s://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.202
+ 6 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können sic
+ h ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-12-MUCFMO-LH2142@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261012T195000Z
+DTEND:20261012T210000Z
+SUMMARY:LH 2142 MUC→FMO
+DESCRIPTION:Lufthansa · LH 2142 · MUC → FMO\\nAbflug 21:50 Uhr\, Ankun
+ ft 23:00 Uhr (Ortszeit)\\nVerkehrstag: Montag\\nQuelle: https://www.fmo.de
+ /muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\\
+ nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Kei
+ ne Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-13-FMOMUC-LH2143@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261013T040500Z
+DTEND:20261013T052000Z
+SUMMARY:LH 2143 FMO→MUC
+DESCRIPTION:Lufthansa · LH 2143 · FMO → MUC\\nAbflug 06:05 Uhr\, Ankun
+ ft 07:20 Uhr (Ortszeit)\\nVerkehrstag: Dienstag\\nQuelle: https://www.fmo.
+ de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.
+ \\nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. K
+ eine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-13-MUCFMO-LH2142@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261013T195000Z
+DTEND:20261013T210000Z
+SUMMARY:LH 2142 MUC→FMO
+DESCRIPTION:Lufthansa · LH 2142 · MUC → FMO\\nAbflug 21:50 Uhr\, Ankun
+ ft 23:00 Uhr (Ortszeit)\\nVerkehrstag: Dienstag\\nQuelle: https://www.fmo.
+ de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.
+ \\nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. K
+ eine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-14-FMOMUC-LH2143@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261014T040500Z
+DTEND:20261014T052000Z
+SUMMARY:LH 2143 FMO→MUC
+DESCRIPTION:Lufthansa · LH 2143 · FMO → MUC\\nAbflug 06:05 Uhr\, Ankun
+ ft 07:20 Uhr (Ortszeit)\\nVerkehrstag: Mittwoch\\nQuelle: https://www.fmo.
+ de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.
+ \\nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. K
+ eine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-14-MUCFMO-LH2138@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261014T133000Z
+DTEND:20261014T144000Z
+SUMMARY:LH 2138 MUC→FMO
+DESCRIPTION:Lufthansa · LH 2138 · MUC → FMO\\nAbflug 15:30 Uhr\, Ankun
+ ft 16:40 Uhr (Ortszeit)\\nVerkehrstag: Mittwoch\\nQuelle: https://www.fmo.
+ de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.
+ \\nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. K
+ eine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-14-FMOMUC-LH2139@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261014T152000Z
+DTEND:20261014T163000Z
+SUMMARY:LH 2139 FMO→MUC
+DESCRIPTION:Lufthansa · LH 2139 · FMO → MUC\\nAbflug 17:20 Uhr\, Ankun
+ ft 18:30 Uhr (Ortszeit)\\nVerkehrstag: Mittwoch\\nQuelle: https://www.fmo.
+ de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.
+ \\nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. K
+ eine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-14-MUCFMO-LH2142@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261014T195000Z
+DTEND:20261014T210000Z
+SUMMARY:LH 2142 MUC→FMO
+DESCRIPTION:Lufthansa · LH 2142 · MUC → FMO\\nAbflug 21:50 Uhr\, Ankun
+ ft 23:00 Uhr (Ortszeit)\\nVerkehrstag: Mittwoch\\nQuelle: https://www.fmo.
+ de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.
+ \\nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. K
+ eine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-15-FMOMUC-LH2143@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261015T040500Z
+DTEND:20261015T052000Z
+SUMMARY:LH 2143 FMO→MUC
+DESCRIPTION:Lufthansa · LH 2143 · FMO → MUC\\nAbflug 06:05 Uhr\, Ankun
+ ft 07:20 Uhr (Ortszeit)\\nVerkehrstag: Donnerstag\\nQuelle: https://www.fm
+ o.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UT
+ C.\\nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern.
+  Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-15-MUCFMO-LH2138@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261015T133000Z
+DTEND:20261015T144000Z
+SUMMARY:LH 2138 MUC→FMO
+DESCRIPTION:Lufthansa · LH 2138 · MUC → FMO\\nAbflug 15:30 Uhr\, Ankun
+ ft 16:40 Uhr (Ortszeit)\\nVerkehrstag: Donnerstag\\nQuelle: https://www.fm
+ o.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UT
+ C.\\nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern.
+  Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-15-FMOMUC-LH2139@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261015T152000Z
+DTEND:20261015T163000Z
+SUMMARY:LH 2139 FMO→MUC
+DESCRIPTION:Lufthansa · LH 2139 · FMO → MUC\\nAbflug 17:20 Uhr\, Ankun
+ ft 18:30 Uhr (Ortszeit)\\nVerkehrstag: Donnerstag\\nQuelle: https://www.fm
+ o.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UT
+ C.\\nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern.
+  Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-15-MUCFMO-LH2142@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261015T195000Z
+DTEND:20261015T210000Z
+SUMMARY:LH 2142 MUC→FMO
+DESCRIPTION:Lufthansa · LH 2142 · MUC → FMO\\nAbflug 21:50 Uhr\, Ankun
+ ft 23:00 Uhr (Ortszeit)\\nVerkehrstag: Donnerstag\\nQuelle: https://www.fm
+ o.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UT
+ C.\\nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern.
+  Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-16-FMOMUC-LH2143@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261016T040500Z
+DTEND:20261016T052000Z
+SUMMARY:LH 2143 FMO→MUC
+DESCRIPTION:Lufthansa · LH 2143 · FMO → MUC\\nAbflug 06:05 Uhr\, Ankun
+ ft 07:20 Uhr (Ortszeit)\\nVerkehrstag: Freitag\\nQuelle: https://www.fmo.d
+ e/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\
+ \nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Ke
+ ine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-16-MUCFMO-LH2138@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261016T133000Z
+DTEND:20261016T144000Z
+SUMMARY:LH 2138 MUC→FMO
+DESCRIPTION:Lufthansa · LH 2138 · MUC → FMO\\nAbflug 15:30 Uhr\, Ankun
+ ft 16:40 Uhr (Ortszeit)\\nVerkehrstag: Freitag\\nQuelle: https://www.fmo.d
+ e/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\
+ \nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Ke
+ ine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-16-FMOMUC-LH2139@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261016T152000Z
+DTEND:20261016T163000Z
+SUMMARY:LH 2139 FMO→MUC
+DESCRIPTION:Lufthansa · LH 2139 · FMO → MUC\\nAbflug 17:20 Uhr\, Ankun
+ ft 18:30 Uhr (Ortszeit)\\nVerkehrstag: Freitag\\nQuelle: https://www.fmo.d
+ e/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\
+ \nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Ke
+ ine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-16-MUCFMO-LH2142@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261016T195000Z
+DTEND:20261016T210000Z
+SUMMARY:LH 2142 MUC→FMO
+DESCRIPTION:Lufthansa · LH 2142 · MUC → FMO\\nAbflug 21:50 Uhr\, Ankun
+ ft 23:00 Uhr (Ortszeit)\\nVerkehrstag: Freitag\\nQuelle: https://www.fmo.d
+ e/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\
+ \nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Ke
+ ine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-17-FMOMUC-LH2143@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261017T040500Z
+DTEND:20261017T052000Z
+SUMMARY:LH 2143 FMO→MUC
+DESCRIPTION:Lufthansa · LH 2143 · FMO → MUC\\nAbflug 06:05 Uhr\, Ankun
+ ft 07:20 Uhr (Ortszeit)\\nVerkehrstag: Samstag\\nQuelle: https://www.fmo.d
+ e/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\
+ \nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Ke
+ ine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-17-MUCFMO-LH2142@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261017T195000Z
+DTEND:20261017T210000Z
+SUMMARY:LH 2142 MUC→FMO
+DESCRIPTION:Lufthansa · LH 2142 · MUC → FMO\\nAbflug 21:50 Uhr\, Ankun
+ ft 23:00 Uhr (Ortszeit)\\nVerkehrstag: Samstag\\nQuelle: https://www.fmo.d
+ e/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\
+ \nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Ke
+ ine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-18-FMOMUC-LH2143@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261018T040500Z
+DTEND:20261018T052000Z
+SUMMARY:LH 2143 FMO→MUC
+DESCRIPTION:Lufthansa · LH 2143 · FMO → MUC\\nAbflug 06:05 Uhr\, Ankun
+ ft 07:20 Uhr (Ortszeit)\\nVerkehrstag: Sonntag\\nQuelle: https://www.fmo.d
+ e/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\
+ \nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Ke
+ ine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-18-MUCFMO-LH2140@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261018T154000Z
+DTEND:20261018T165000Z
+SUMMARY:LH 2140 MUC→FMO
+DESCRIPTION:Lufthansa · LH 2140 · MUC → FMO\\nAbflug 17:40 Uhr\, Ankun
+ ft 18:50 Uhr (Ortszeit)\\nVerkehrstag: Sonntag\\nQuelle: https://www.fmo.d
+ e/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\
+ \nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Ke
+ ine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-18-FMOMUC-LH2141@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261018T173000Z
+DTEND:20261018T184000Z
+SUMMARY:LH 2141 FMO→MUC
+DESCRIPTION:Lufthansa · LH 2141 · FMO → MUC\\nAbflug 19:30 Uhr\, Ankun
+ ft 20:40 Uhr (Ortszeit)\\nVerkehrstag: Sonntag\\nQuelle: https://www.fmo.d
+ e/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\
+ \nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Ke
+ ine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-18-MUCFMO-LH2142@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261018T195000Z
+DTEND:20261018T210000Z
+SUMMARY:LH 2142 MUC→FMO
+DESCRIPTION:Lufthansa · LH 2142 · MUC → FMO\\nAbflug 21:50 Uhr\, Ankun
+ ft 23:00 Uhr (Ortszeit)\\nVerkehrstag: Sonntag\\nQuelle: https://www.fmo.d
+ e/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\
+ \nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Ke
+ ine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-19-FMOMUC-LH2143@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261019T040500Z
+DTEND:20261019T052000Z
+SUMMARY:LH 2143 FMO→MUC
+DESCRIPTION:Lufthansa · LH 2143 · FMO → MUC\\nAbflug 06:05 Uhr\, Ankun
+ ft 07:20 Uhr (Ortszeit)\\nVerkehrstag: Montag\\nQuelle: https://www.fmo.de
+ /muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\\
+ nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Kei
+ ne Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-19-MUCFMO-VL2138@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261019T133000Z
+DTEND:20261019T144000Z
+SUMMARY:VL 2138 MUC→FMO
+DESCRIPTION:Lufthansa City Airlines · VL 2138 · MUC → FMO\\nAbflug 15:
+ 30 Uhr\, Ankunft 16:40 Uhr (Ortszeit)\\nVerkehrstag: Montag\\nQuelle: http
+ s://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.202
+ 6 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können sic
+ h ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-19-FMOMUC-VL2139@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261019T152000Z
+DTEND:20261019T162500Z
+SUMMARY:VL 2139 FMO→MUC
+DESCRIPTION:Lufthansa City Airlines · VL 2139 · FMO → MUC\\nAbflug 17:
+ 20 Uhr\, Ankunft 18:25 Uhr (Ortszeit)\\nVerkehrstag: Montag\\nQuelle: http
+ s://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.202
+ 6 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können sic
+ h ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-19-MUCFMO-LH2142@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261019T195000Z
+DTEND:20261019T210000Z
+SUMMARY:LH 2142 MUC→FMO
+DESCRIPTION:Lufthansa · LH 2142 · MUC → FMO\\nAbflug 21:50 Uhr\, Ankun
+ ft 23:00 Uhr (Ortszeit)\\nVerkehrstag: Montag\\nQuelle: https://www.fmo.de
+ /muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\\
+ nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Kei
+ ne Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-20-FMOMUC-LH2143@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261020T040500Z
+DTEND:20261020T052000Z
+SUMMARY:LH 2143 FMO→MUC
+DESCRIPTION:Lufthansa · LH 2143 · FMO → MUC\\nAbflug 06:05 Uhr\, Ankun
+ ft 07:20 Uhr (Ortszeit)\\nVerkehrstag: Dienstag\\nQuelle: https://www.fmo.
+ de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.
+ \\nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. K
+ eine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-20-MUCFMO-LH2142@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261020T195000Z
+DTEND:20261020T210000Z
+SUMMARY:LH 2142 MUC→FMO
+DESCRIPTION:Lufthansa · LH 2142 · MUC → FMO\\nAbflug 21:50 Uhr\, Ankun
+ ft 23:00 Uhr (Ortszeit)\\nVerkehrstag: Dienstag\\nQuelle: https://www.fmo.
+ de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.
+ \\nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. K
+ eine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-21-FMOMUC-LH2143@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261021T040500Z
+DTEND:20261021T052000Z
+SUMMARY:LH 2143 FMO→MUC
+DESCRIPTION:Lufthansa · LH 2143 · FMO → MUC\\nAbflug 06:05 Uhr\, Ankun
+ ft 07:20 Uhr (Ortszeit)\\nVerkehrstag: Mittwoch\\nQuelle: https://www.fmo.
+ de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.
+ \\nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. K
+ eine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-21-MUCFMO-LH2138@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261021T133000Z
+DTEND:20261021T144000Z
+SUMMARY:LH 2138 MUC→FMO
+DESCRIPTION:Lufthansa · LH 2138 · MUC → FMO\\nAbflug 15:30 Uhr\, Ankun
+ ft 16:40 Uhr (Ortszeit)\\nVerkehrstag: Mittwoch\\nQuelle: https://www.fmo.
+ de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.
+ \\nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. K
+ eine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-21-FMOMUC-LH2139@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261021T152000Z
+DTEND:20261021T163000Z
+SUMMARY:LH 2139 FMO→MUC
+DESCRIPTION:Lufthansa · LH 2139 · FMO → MUC\\nAbflug 17:20 Uhr\, Ankun
+ ft 18:30 Uhr (Ortszeit)\\nVerkehrstag: Mittwoch\\nQuelle: https://www.fmo.
+ de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.
+ \\nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. K
+ eine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-21-MUCFMO-LH2142@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261021T195000Z
+DTEND:20261021T210000Z
+SUMMARY:LH 2142 MUC→FMO
+DESCRIPTION:Lufthansa · LH 2142 · MUC → FMO\\nAbflug 21:50 Uhr\, Ankun
+ ft 23:00 Uhr (Ortszeit)\\nVerkehrstag: Mittwoch\\nQuelle: https://www.fmo.
+ de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.
+ \\nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. K
+ eine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-22-FMOMUC-LH2143@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261022T040500Z
+DTEND:20261022T052000Z
+SUMMARY:LH 2143 FMO→MUC
+DESCRIPTION:Lufthansa · LH 2143 · FMO → MUC\\nAbflug 06:05 Uhr\, Ankun
+ ft 07:20 Uhr (Ortszeit)\\nVerkehrstag: Donnerstag\\nQuelle: https://www.fm
+ o.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UT
+ C.\\nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern.
+  Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-22-MUCFMO-LH2138@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261022T133000Z
+DTEND:20261022T144000Z
+SUMMARY:LH 2138 MUC→FMO
+DESCRIPTION:Lufthansa · LH 2138 · MUC → FMO\\nAbflug 15:30 Uhr\, Ankun
+ ft 16:40 Uhr (Ortszeit)\\nVerkehrstag: Donnerstag\\nQuelle: https://www.fm
+ o.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UT
+ C.\\nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern.
+  Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-22-FMOMUC-LH2139@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261022T152000Z
+DTEND:20261022T163000Z
+SUMMARY:LH 2139 FMO→MUC
+DESCRIPTION:Lufthansa · LH 2139 · FMO → MUC\\nAbflug 17:20 Uhr\, Ankun
+ ft 18:30 Uhr (Ortszeit)\\nVerkehrstag: Donnerstag\\nQuelle: https://www.fm
+ o.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UT
+ C.\\nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern.
+  Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-22-MUCFMO-LH2142@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261022T195000Z
+DTEND:20261022T210000Z
+SUMMARY:LH 2142 MUC→FMO
+DESCRIPTION:Lufthansa · LH 2142 · MUC → FMO\\nAbflug 21:50 Uhr\, Ankun
+ ft 23:00 Uhr (Ortszeit)\\nVerkehrstag: Donnerstag\\nQuelle: https://www.fm
+ o.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UT
+ C.\\nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern.
+  Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-23-FMOMUC-LH2143@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261023T040500Z
+DTEND:20261023T052000Z
+SUMMARY:LH 2143 FMO→MUC
+DESCRIPTION:Lufthansa · LH 2143 · FMO → MUC\\nAbflug 06:05 Uhr\, Ankun
+ ft 07:20 Uhr (Ortszeit)\\nVerkehrstag: Freitag\\nQuelle: https://www.fmo.d
+ e/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\
+ \nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Ke
+ ine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-23-MUCFMO-LH2138@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261023T133000Z
+DTEND:20261023T144000Z
+SUMMARY:LH 2138 MUC→FMO
+DESCRIPTION:Lufthansa · LH 2138 · MUC → FMO\\nAbflug 15:30 Uhr\, Ankun
+ ft 16:40 Uhr (Ortszeit)\\nVerkehrstag: Freitag\\nQuelle: https://www.fmo.d
+ e/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\
+ \nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Ke
+ ine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-23-FMOMUC-LH2139@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261023T152000Z
+DTEND:20261023T163000Z
+SUMMARY:LH 2139 FMO→MUC
+DESCRIPTION:Lufthansa · LH 2139 · FMO → MUC\\nAbflug 17:20 Uhr\, Ankun
+ ft 18:30 Uhr (Ortszeit)\\nVerkehrstag: Freitag\\nQuelle: https://www.fmo.d
+ e/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\
+ \nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Ke
+ ine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-23-MUCFMO-LH2142@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261023T195000Z
+DTEND:20261023T210000Z
+SUMMARY:LH 2142 MUC→FMO
+DESCRIPTION:Lufthansa · LH 2142 · MUC → FMO\\nAbflug 21:50 Uhr\, Ankun
+ ft 23:00 Uhr (Ortszeit)\\nVerkehrstag: Freitag\\nQuelle: https://www.fmo.d
+ e/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\
+ \nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Ke
+ ine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-24-FMOMUC-LH2143@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261024T040500Z
+DTEND:20261024T052000Z
+SUMMARY:LH 2143 FMO→MUC
+DESCRIPTION:Lufthansa · LH 2143 · FMO → MUC\\nAbflug 06:05 Uhr\, Ankun
+ ft 07:20 Uhr (Ortszeit)\\nVerkehrstag: Samstag\\nQuelle: https://www.fmo.d
+ e/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\
+ \nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Ke
+ ine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-24-MUCFMO-LH2142@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261024T195000Z
+DTEND:20261024T210000Z
+SUMMARY:LH 2142 MUC→FMO
+DESCRIPTION:Lufthansa · LH 2142 · MUC → FMO\\nAbflug 21:50 Uhr\, Ankun
+ ft 23:00 Uhr (Ortszeit)\\nVerkehrstag: Samstag\\nQuelle: https://www.fmo.d
+ e/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\
+ \nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Ke
+ ine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-25-FMOMUC-LH2143@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261025T050500Z
+DTEND:20261025T062000Z
+SUMMARY:LH 2143 FMO→MUC
+DESCRIPTION:Lufthansa · LH 2143 · FMO → MUC\\nAbflug 06:05 Uhr\, Ankun
+ ft 07:20 Uhr (Ortszeit)\\nVerkehrstag: Sonntag\\nQuelle: https://www.fmo.d
+ e/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\
+ \nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Ke
+ ine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-25-MUCFMO-VL2136@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261025T101000Z
+DTEND:20261025T112000Z
+SUMMARY:VL 2136 MUC→FMO
+DESCRIPTION:Lufthansa City Airlines · VL 2136 · MUC → FMO\\nAbflug 11:
+ 10 Uhr\, Ankunft 12:20 Uhr (Ortszeit)\\nVerkehrstag: Sonntag\\nQuelle: htt
+ ps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.20
+ 26 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können si
+ ch ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-25-FMOMUC-VL2137@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261025T120500Z
+DTEND:20261025T131000Z
+SUMMARY:VL 2137 FMO→MUC
+DESCRIPTION:Lufthansa City Airlines · VL 2137 · FMO → MUC\\nAbflug 13:
+ 05 Uhr\, Ankunft 14:10 Uhr (Ortszeit)\\nVerkehrstag: Sonntag\\nQuelle: htt
+ ps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.20
+ 26 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können si
+ ch ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-25-MUCFMO-VL2142@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261025T212000Z
+DTEND:20261025T223000Z
+SUMMARY:VL 2142 MUC→FMO
+DESCRIPTION:Lufthansa City Airlines · VL 2142 · MUC → FMO\\nAbflug 22:
+ 20 Uhr\, Ankunft 23:30 Uhr (Ortszeit)\\nVerkehrstag: Sonntag\\nQuelle: htt
+ ps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.20
+ 26 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können si
+ ch ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-26-FMOMUC-VL2143@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261026T050500Z
+DTEND:20261026T061000Z
+SUMMARY:VL 2143 FMO→MUC
+DESCRIPTION:Lufthansa City Airlines · VL 2143 · FMO → MUC\\nAbflug 06:
+ 05 Uhr\, Ankunft 07:10 Uhr (Ortszeit)\\nVerkehrstag: Montag\\nQuelle: http
+ s://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.202
+ 6 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können sic
+ h ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-26-MUCFMO-VL2134@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261026T070000Z
+DTEND:20261026T081000Z
+SUMMARY:VL 2134 MUC→FMO
+DESCRIPTION:Lufthansa City Airlines · VL 2134 · MUC → FMO\\nAbflug 08:
+ 00 Uhr\, Ankunft 09:10 Uhr (Ortszeit)\\nVerkehrstag: Montag\\nQuelle: http
+ s://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.202
+ 6 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können sic
+ h ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-26-FMOMUC-VL2135@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261026T085000Z
+DTEND:20261026T095500Z
+SUMMARY:VL 2135 FMO→MUC
+DESCRIPTION:Lufthansa City Airlines · VL 2135 · FMO → MUC\\nAbflug 09:
+ 50 Uhr\, Ankunft 10:55 Uhr (Ortszeit)\\nVerkehrstag: Montag\\nQuelle: http
+ s://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.202
+ 6 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können sic
+ h ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-26-MUCFMO-VL2138@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261026T140500Z
+DTEND:20261026T151500Z
+SUMMARY:VL 2138 MUC→FMO
+DESCRIPTION:Lufthansa City Airlines · VL 2138 · MUC → FMO\\nAbflug 15:
+ 05 Uhr\, Ankunft 16:15 Uhr (Ortszeit)\\nVerkehrstag: Montag\\nQuelle: http
+ s://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.202
+ 6 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können sic
+ h ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-26-FMOMUC-VL2139@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261026T155500Z
+DTEND:20261026T170000Z
+SUMMARY:VL 2139 FMO→MUC
+DESCRIPTION:Lufthansa City Airlines · VL 2139 · FMO → MUC\\nAbflug 16:
+ 55 Uhr\, Ankunft 18:00 Uhr (Ortszeit)\\nVerkehrstag: Montag\\nQuelle: http
+ s://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.202
+ 6 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können sic
+ h ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-26-MUCFMO-LH2140@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261026T172000Z
+DTEND:20261026T183000Z
+SUMMARY:LH 2140 MUC→FMO
+DESCRIPTION:Lufthansa · LH 2140 · MUC → FMO\\nAbflug 18:20 Uhr\, Ankun
+ ft 19:30 Uhr (Ortszeit)\\nVerkehrstag: Montag\\nQuelle: https://www.fmo.de
+ /muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\\
+ nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Kei
+ ne Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-26-FMOMUC-LH2141@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261026T191500Z
+DTEND:20261026T202500Z
+SUMMARY:LH 2141 FMO→MUC
+DESCRIPTION:Lufthansa · LH 2141 · FMO → MUC\\nAbflug 20:15 Uhr\, Ankun
+ ft 21:25 Uhr (Ortszeit)\\nVerkehrstag: Montag\\nQuelle: https://www.fmo.de
+ /muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\\
+ nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Kei
+ ne Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-26-MUCFMO-VL2142@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261026T212000Z
+DTEND:20261026T223000Z
+SUMMARY:VL 2142 MUC→FMO
+DESCRIPTION:Lufthansa City Airlines · VL 2142 · MUC → FMO\\nAbflug 22:
+ 20 Uhr\, Ankunft 23:30 Uhr (Ortszeit)\\nVerkehrstag: Montag\\nQuelle: http
+ s://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.202
+ 6 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können sic
+ h ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-27-FMOMUC-VL2143@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261027T050500Z
+DTEND:20261027T061000Z
+SUMMARY:VL 2143 FMO→MUC
+DESCRIPTION:Lufthansa City Airlines · VL 2143 · FMO → MUC\\nAbflug 06:
+ 05 Uhr\, Ankunft 07:10 Uhr (Ortszeit)\\nVerkehrstag: Dienstag\\nQuelle: ht
+ tps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2
+ 026 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können s
+ ich ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-27-MUCFMO-VL2134@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261027T070000Z
+DTEND:20261027T081000Z
+SUMMARY:VL 2134 MUC→FMO
+DESCRIPTION:Lufthansa City Airlines · VL 2134 · MUC → FMO\\nAbflug 08:
+ 00 Uhr\, Ankunft 09:10 Uhr (Ortszeit)\\nVerkehrstag: Dienstag\\nQuelle: ht
+ tps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2
+ 026 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können s
+ ich ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-27-FMOMUC-VL2135@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261027T085000Z
+DTEND:20261027T095500Z
+SUMMARY:VL 2135 FMO→MUC
+DESCRIPTION:Lufthansa City Airlines · VL 2135 · FMO → MUC\\nAbflug 09:
+ 50 Uhr\, Ankunft 10:55 Uhr (Ortszeit)\\nVerkehrstag: Dienstag\\nQuelle: ht
+ tps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2
+ 026 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können s
+ ich ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-27-MUCFMO-VL2136@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261027T101000Z
+DTEND:20261027T112000Z
+SUMMARY:VL 2136 MUC→FMO
+DESCRIPTION:Lufthansa City Airlines · VL 2136 · MUC → FMO\\nAbflug 11:
+ 10 Uhr\, Ankunft 12:20 Uhr (Ortszeit)\\nVerkehrstag: Dienstag\\nQuelle: ht
+ tps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2
+ 026 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können s
+ ich ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-27-FMOMUC-VL2137@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261027T120500Z
+DTEND:20261027T131000Z
+SUMMARY:VL 2137 FMO→MUC
+DESCRIPTION:Lufthansa City Airlines · VL 2137 · FMO → MUC\\nAbflug 13:
+ 05 Uhr\, Ankunft 14:10 Uhr (Ortszeit)\\nVerkehrstag: Dienstag\\nQuelle: ht
+ tps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2
+ 026 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können s
+ ich ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-27-MUCFMO-LH2140@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261027T172000Z
+DTEND:20261027T183000Z
+SUMMARY:LH 2140 MUC→FMO
+DESCRIPTION:Lufthansa · LH 2140 · MUC → FMO\\nAbflug 18:20 Uhr\, Ankun
+ ft 19:30 Uhr (Ortszeit)\\nVerkehrstag: Dienstag\\nQuelle: https://www.fmo.
+ de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.
+ \\nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. K
+ eine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-27-FMOMUC-LH2141@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261027T191500Z
+DTEND:20261027T202500Z
+SUMMARY:LH 2141 FMO→MUC
+DESCRIPTION:Lufthansa · LH 2141 · FMO → MUC\\nAbflug 20:15 Uhr\, Ankun
+ ft 21:25 Uhr (Ortszeit)\\nVerkehrstag: Dienstag\\nQuelle: https://www.fmo.
+ de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.
+ \\nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. K
+ eine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-27-MUCFMO-VL2142@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261027T212000Z
+DTEND:20261027T223000Z
+SUMMARY:VL 2142 MUC→FMO
+DESCRIPTION:Lufthansa City Airlines · VL 2142 · MUC → FMO\\nAbflug 22:
+ 20 Uhr\, Ankunft 23:30 Uhr (Ortszeit)\\nVerkehrstag: Dienstag\\nQuelle: ht
+ tps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2
+ 026 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können s
+ ich ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-28-FMOMUC-VL2143@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261028T050500Z
+DTEND:20261028T061000Z
+SUMMARY:VL 2143 FMO→MUC
+DESCRIPTION:Lufthansa City Airlines · VL 2143 · FMO → MUC\\nAbflug 06:
+ 05 Uhr\, Ankunft 07:10 Uhr (Ortszeit)\\nVerkehrstag: Mittwoch\\nQuelle: ht
+ tps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2
+ 026 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können s
+ ich ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-28-MUCFMO-VL2134@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261028T070000Z
+DTEND:20261028T081000Z
+SUMMARY:VL 2134 MUC→FMO
+DESCRIPTION:Lufthansa City Airlines · VL 2134 · MUC → FMO\\nAbflug 08:
+ 00 Uhr\, Ankunft 09:10 Uhr (Ortszeit)\\nVerkehrstag: Mittwoch\\nQuelle: ht
+ tps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2
+ 026 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können s
+ ich ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-28-FMOMUC-VL2135@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261028T085000Z
+DTEND:20261028T095500Z
+SUMMARY:VL 2135 FMO→MUC
+DESCRIPTION:Lufthansa City Airlines · VL 2135 · FMO → MUC\\nAbflug 09:
+ 50 Uhr\, Ankunft 10:55 Uhr (Ortszeit)\\nVerkehrstag: Mittwoch\\nQuelle: ht
+ tps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2
+ 026 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können s
+ ich ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-28-MUCFMO-VL2138@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261028T140500Z
+DTEND:20261028T151500Z
+SUMMARY:VL 2138 MUC→FMO
+DESCRIPTION:Lufthansa City Airlines · VL 2138 · MUC → FMO\\nAbflug 15:
+ 05 Uhr\, Ankunft 16:15 Uhr (Ortszeit)\\nVerkehrstag: Mittwoch\\nQuelle: ht
+ tps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2
+ 026 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können s
+ ich ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-28-FMOMUC-VL2139@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261028T155500Z
+DTEND:20261028T170000Z
+SUMMARY:VL 2139 FMO→MUC
+DESCRIPTION:Lufthansa City Airlines · VL 2139 · FMO → MUC\\nAbflug 16:
+ 55 Uhr\, Ankunft 18:00 Uhr (Ortszeit)\\nVerkehrstag: Mittwoch\\nQuelle: ht
+ tps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2
+ 026 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können s
+ ich ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-28-MUCFMO-VL2142@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261028T212000Z
+DTEND:20261028T223000Z
+SUMMARY:VL 2142 MUC→FMO
+DESCRIPTION:Lufthansa City Airlines · VL 2142 · MUC → FMO\\nAbflug 22:
+ 20 Uhr\, Ankunft 23:30 Uhr (Ortszeit)\\nVerkehrstag: Mittwoch\\nQuelle: ht
+ tps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2
+ 026 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können s
+ ich ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-29-FMOMUC-VL2143@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261029T050500Z
+DTEND:20261029T061000Z
+SUMMARY:VL 2143 FMO→MUC
+DESCRIPTION:Lufthansa City Airlines · VL 2143 · FMO → MUC\\nAbflug 06:
+ 05 Uhr\, Ankunft 07:10 Uhr (Ortszeit)\\nVerkehrstag: Donnerstag\\nQuelle: 
+ https://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10
+ .2026 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können
+  sich ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-29-MUCFMO-VL2134@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261029T070000Z
+DTEND:20261029T081000Z
+SUMMARY:VL 2134 MUC→FMO
+DESCRIPTION:Lufthansa City Airlines · VL 2134 · MUC → FMO\\nAbflug 08:
+ 00 Uhr\, Ankunft 09:10 Uhr (Ortszeit)\\nVerkehrstag: Donnerstag\\nQuelle: 
+ https://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10
+ .2026 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können
+  sich ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-29-FMOMUC-VL2135@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261029T085000Z
+DTEND:20261029T095500Z
+SUMMARY:VL 2135 FMO→MUC
+DESCRIPTION:Lufthansa City Airlines · VL 2135 · FMO → MUC\\nAbflug 09:
+ 50 Uhr\, Ankunft 10:55 Uhr (Ortszeit)\\nVerkehrstag: Donnerstag\\nQuelle: 
+ https://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10
+ .2026 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können
+  sich ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-29-MUCFMO-VL2136@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261029T101000Z
+DTEND:20261029T112000Z
+SUMMARY:VL 2136 MUC→FMO
+DESCRIPTION:Lufthansa City Airlines · VL 2136 · MUC → FMO\\nAbflug 11:
+ 10 Uhr\, Ankunft 12:20 Uhr (Ortszeit)\\nVerkehrstag: Donnerstag\\nQuelle: 
+ https://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10
+ .2026 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können
+  sich ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-29-FMOMUC-VL2137@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261029T120500Z
+DTEND:20261029T131000Z
+SUMMARY:VL 2137 FMO→MUC
+DESCRIPTION:Lufthansa City Airlines · VL 2137 · FMO → MUC\\nAbflug 13:
+ 05 Uhr\, Ankunft 14:10 Uhr (Ortszeit)\\nVerkehrstag: Donnerstag\\nQuelle: 
+ https://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10
+ .2026 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können
+  sich ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-29-MUCFMO-LH2140@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261029T172500Z
+DTEND:20261029T183500Z
+SUMMARY:LH 2140 MUC→FMO
+DESCRIPTION:Lufthansa · LH 2140 · MUC → FMO\\nAbflug 18:25 Uhr\, Ankun
+ ft 19:35 Uhr (Ortszeit)\\nVerkehrstag: Donnerstag\\nQuelle: https://www.fm
+ o.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UT
+ C.\\nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern.
+  Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-29-FMOMUC-LH2141@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261029T191500Z
+DTEND:20261029T202500Z
+SUMMARY:LH 2141 FMO→MUC
+DESCRIPTION:Lufthansa · LH 2141 · FMO → MUC\\nAbflug 20:15 Uhr\, Ankun
+ ft 21:25 Uhr (Ortszeit)\\nVerkehrstag: Donnerstag\\nQuelle: https://www.fm
+ o.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UT
+ C.\\nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern.
+  Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-29-MUCFMO-VL2142@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261029T212000Z
+DTEND:20261029T223000Z
+SUMMARY:VL 2142 MUC→FMO
+DESCRIPTION:Lufthansa City Airlines · VL 2142 · MUC → FMO\\nAbflug 22:
+ 20 Uhr\, Ankunft 23:30 Uhr (Ortszeit)\\nVerkehrstag: Donnerstag\\nQuelle: 
+ https://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10
+ .2026 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können
+  sich ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-30-FMOMUC-VL2143@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261030T050500Z
+DTEND:20261030T061000Z
+SUMMARY:VL 2143 FMO→MUC
+DESCRIPTION:Lufthansa City Airlines · VL 2143 · FMO → MUC\\nAbflug 06:
+ 05 Uhr\, Ankunft 07:10 Uhr (Ortszeit)\\nVerkehrstag: Freitag\\nQuelle: htt
+ ps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.20
+ 26 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können si
+ ch ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-30-MUCFMO-VL2134@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261030T070000Z
+DTEND:20261030T081000Z
+SUMMARY:VL 2134 MUC→FMO
+DESCRIPTION:Lufthansa City Airlines · VL 2134 · MUC → FMO\\nAbflug 08:
+ 00 Uhr\, Ankunft 09:10 Uhr (Ortszeit)\\nVerkehrstag: Freitag\\nQuelle: htt
+ ps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.20
+ 26 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können si
+ ch ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-30-FMOMUC-VL2135@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261030T085000Z
+DTEND:20261030T095500Z
+SUMMARY:VL 2135 FMO→MUC
+DESCRIPTION:Lufthansa City Airlines · VL 2135 · FMO → MUC\\nAbflug 09:
+ 50 Uhr\, Ankunft 10:55 Uhr (Ortszeit)\\nVerkehrstag: Freitag\\nQuelle: htt
+ ps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.20
+ 26 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können si
+ ch ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-30-MUCFMO-LH2138@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261030T140500Z
+DTEND:20261030T151500Z
+SUMMARY:LH 2138 MUC→FMO
+DESCRIPTION:Lufthansa · LH 2138 · MUC → FMO\\nAbflug 15:05 Uhr\, Ankun
+ ft 16:15 Uhr (Ortszeit)\\nVerkehrstag: Freitag\\nQuelle: https://www.fmo.d
+ e/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\
+ \nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Ke
+ ine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-30-FMOMUC-LH2139@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261030T155500Z
+DTEND:20261030T170500Z
+SUMMARY:LH 2139 FMO→MUC
+DESCRIPTION:Lufthansa · LH 2139 · FMO → MUC\\nAbflug 16:55 Uhr\, Ankun
+ ft 18:05 Uhr (Ortszeit)\\nVerkehrstag: Freitag\\nQuelle: https://www.fmo.d
+ e/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\
+ \nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Ke
+ ine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-30-MUCFMO-LH2140@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261030T172500Z
+DTEND:20261030T183500Z
+SUMMARY:LH 2140 MUC→FMO
+DESCRIPTION:Lufthansa · LH 2140 · MUC → FMO\\nAbflug 18:25 Uhr\, Ankun
+ ft 19:35 Uhr (Ortszeit)\\nVerkehrstag: Freitag\\nQuelle: https://www.fmo.d
+ e/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\
+ \nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Ke
+ ine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-30-FMOMUC-LH2141@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261030T191500Z
+DTEND:20261030T202500Z
+SUMMARY:LH 2141 FMO→MUC
+DESCRIPTION:Lufthansa · LH 2141 · FMO → MUC\\nAbflug 20:15 Uhr\, Ankun
+ ft 21:25 Uhr (Ortszeit)\\nVerkehrstag: Freitag\\nQuelle: https://www.fmo.d
+ e/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.\
+ \nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. Ke
+ ine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-30-MUCFMO-VL2142@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261030T212000Z
+DTEND:20261030T223000Z
+SUMMARY:VL 2142 MUC→FMO
+DESCRIPTION:Lufthansa City Airlines · VL 2142 · MUC → FMO\\nAbflug 22:
+ 20 Uhr\, Ankunft 23:30 Uhr (Ortszeit)\\nVerkehrstag: Freitag\\nQuelle: htt
+ ps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.20
+ 26 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können si
+ ch ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-31-FMOMUC-VL2143@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261031T050500Z
+DTEND:20261031T061000Z
+SUMMARY:VL 2143 FMO→MUC
+DESCRIPTION:Lufthansa City Airlines · VL 2143 · FMO → MUC\\nAbflug 06:
+ 05 Uhr\, Ankunft 07:10 Uhr (Ortszeit)\\nVerkehrstag: Samstag\\nQuelle: htt
+ ps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.20
+ 26 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können si
+ ch ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-31-MUCFMO-VL2134@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261031T070000Z
+DTEND:20261031T081000Z
+SUMMARY:VL 2134 MUC→FMO
+DESCRIPTION:Lufthansa City Airlines · VL 2134 · MUC → FMO\\nAbflug 08:
+ 00 Uhr\, Ankunft 09:10 Uhr (Ortszeit)\\nVerkehrstag: Samstag\\nQuelle: htt
+ ps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.20
+ 26 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können si
+ ch ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-31-FMOMUC-VL2135@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261031T085000Z
+DTEND:20261031T095500Z
+SUMMARY:VL 2135 FMO→MUC
+DESCRIPTION:Lufthansa City Airlines · VL 2135 · FMO → MUC\\nAbflug 09:
+ 50 Uhr\, Ankunft 10:55 Uhr (Ortszeit)\\nVerkehrstag: Samstag\\nQuelle: htt
+ ps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.20
+ 26 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können si
+ ch ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-31-MUCFMO-VL2136@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261031T101000Z
+DTEND:20261031T112000Z
+SUMMARY:VL 2136 MUC→FMO
+DESCRIPTION:Lufthansa City Airlines · VL 2136 · MUC → FMO\\nAbflug 11:
+ 10 Uhr\, Ankunft 12:20 Uhr (Ortszeit)\\nVerkehrstag: Samstag\\nQuelle: htt
+ ps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.20
+ 26 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können si
+ ch ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-31-FMOMUC-VL2137@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261031T120500Z
+DTEND:20261031T131000Z
+SUMMARY:VL 2137 FMO→MUC
+DESCRIPTION:Lufthansa City Airlines · VL 2137 · FMO → MUC\\nAbflug 13:
+ 05 Uhr\, Ankunft 14:10 Uhr (Ortszeit)\\nVerkehrstag: Samstag\\nQuelle: htt
+ ps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.20
+ 26 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können si
+ ch ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-31-MUCFMO-VL2140@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261031T172000Z
+DTEND:20261031T183000Z
+SUMMARY:VL 2140 MUC→FMO
+DESCRIPTION:Lufthansa City Airlines · VL 2140 · MUC → FMO\\nAbflug 18:
+ 20 Uhr\, Ankunft 19:30 Uhr (Ortszeit)\\nVerkehrstag: Samstag\\nQuelle: htt
+ ps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.20
+ 26 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können si
+ ch ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-01-FMOMUC-VL2143@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261101T050500Z
+DTEND:20261101T061000Z
+SUMMARY:VL 2143 FMO→MUC
+DESCRIPTION:Lufthansa City Airlines · VL 2143 · FMO → MUC\\nAbflug 06:
+ 05 Uhr\, Ankunft 07:10 Uhr (Ortszeit)\\nVerkehrstag: Sonntag\\nQuelle: htt
+ ps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.20
+ 26 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können si
+ ch ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-01-MUCFMO-VL2136@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261101T101000Z
+DTEND:20261101T112000Z
+SUMMARY:VL 2136 MUC→FMO
+DESCRIPTION:Lufthansa City Airlines · VL 2136 · MUC → FMO\\nAbflug 11:
+ 10 Uhr\, Ankunft 12:20 Uhr (Ortszeit)\\nVerkehrstag: Sonntag\\nQuelle: htt
+ ps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.20
+ 26 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können si
+ ch ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-01-FMOMUC-VL2137@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261101T120500Z
+DTEND:20261101T131000Z
+SUMMARY:VL 2137 FMO→MUC
+DESCRIPTION:Lufthansa City Airlines · VL 2137 · FMO → MUC\\nAbflug 13:
+ 05 Uhr\, Ankunft 14:10 Uhr (Ortszeit)\\nVerkehrstag: Sonntag\\nQuelle: htt
+ ps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.20
+ 26 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können si
+ ch ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-01-MUCFMO-VL2142@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261101T212000Z
+DTEND:20261101T223000Z
+SUMMARY:VL 2142 MUC→FMO
+DESCRIPTION:Lufthansa City Airlines · VL 2142 · MUC → FMO\\nAbflug 22:
+ 20 Uhr\, Ankunft 23:30 Uhr (Ortszeit)\\nVerkehrstag: Sonntag\\nQuelle: htt
+ ps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.20
+ 26 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können si
+ ch ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-02-FMOMUC-VL2143@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261102T050500Z
+DTEND:20261102T061000Z
+SUMMARY:VL 2143 FMO→MUC
+DESCRIPTION:Lufthansa City Airlines · VL 2143 · FMO → MUC\\nAbflug 06:
+ 05 Uhr\, Ankunft 07:10 Uhr (Ortszeit)\\nVerkehrstag: Montag\\nQuelle: http
+ s://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.202
+ 6 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können sic
+ h ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-02-MUCFMO-VL2134@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261102T070000Z
+DTEND:20261102T081000Z
+SUMMARY:VL 2134 MUC→FMO
+DESCRIPTION:Lufthansa City Airlines · VL 2134 · MUC → FMO\\nAbflug 08:
+ 00 Uhr\, Ankunft 09:10 Uhr (Ortszeit)\\nVerkehrstag: Montag\\nQuelle: http
+ s://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.202
+ 6 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können sic
+ h ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-02-FMOMUC-VL2135@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261102T085000Z
+DTEND:20261102T095500Z
+SUMMARY:VL 2135 FMO→MUC
+DESCRIPTION:Lufthansa City Airlines · VL 2135 · FMO → MUC\\nAbflug 09:
+ 50 Uhr\, Ankunft 10:55 Uhr (Ortszeit)\\nVerkehrstag: Montag\\nQuelle: http
+ s://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.202
+ 6 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können sic
+ h ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-02-MUCFMO-VL2138@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261102T140500Z
+DTEND:20261102T151500Z
+SUMMARY:VL 2138 MUC→FMO
+DESCRIPTION:Lufthansa City Airlines · VL 2138 · MUC → FMO\\nAbflug 15:
+ 05 Uhr\, Ankunft 16:15 Uhr (Ortszeit)\\nVerkehrstag: Montag\\nQuelle: http
+ s://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.202
+ 6 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können sic
+ h ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-02-FMOMUC-VL2139@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261102T155500Z
+DTEND:20261102T170000Z
+SUMMARY:VL 2139 FMO→MUC
+DESCRIPTION:Lufthansa City Airlines · VL 2139 · FMO → MUC\\nAbflug 16:
+ 55 Uhr\, Ankunft 18:00 Uhr (Ortszeit)\\nVerkehrstag: Montag\\nQuelle: http
+ s://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.202
+ 6 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können sic
+ h ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-02-MUCFMO-VL2142@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261102T212000Z
+DTEND:20261102T223000Z
+SUMMARY:VL 2142 MUC→FMO
+DESCRIPTION:Lufthansa City Airlines · VL 2142 · MUC → FMO\\nAbflug 22:
+ 20 Uhr\, Ankunft 23:30 Uhr (Ortszeit)\\nVerkehrstag: Montag\\nQuelle: http
+ s://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.202
+ 6 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können sic
+ h ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-03-FMOMUC-VL2143@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261103T050500Z
+DTEND:20261103T061000Z
+SUMMARY:VL 2143 FMO→MUC
+DESCRIPTION:Lufthansa City Airlines · VL 2143 · FMO → MUC\\nAbflug 06:
+ 05 Uhr\, Ankunft 07:10 Uhr (Ortszeit)\\nVerkehrstag: Dienstag\\nQuelle: ht
+ tps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2
+ 026 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können s
+ ich ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-03-MUCFMO-VL2136@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261103T101000Z
+DTEND:20261103T112000Z
+SUMMARY:VL 2136 MUC→FMO
+DESCRIPTION:Lufthansa City Airlines · VL 2136 · MUC → FMO\\nAbflug 11:
+ 10 Uhr\, Ankunft 12:20 Uhr (Ortszeit)\\nVerkehrstag: Dienstag\\nQuelle: ht
+ tps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2
+ 026 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können s
+ ich ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-03-FMOMUC-VL2137@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261103T120500Z
+DTEND:20261103T131000Z
+SUMMARY:VL 2137 FMO→MUC
+DESCRIPTION:Lufthansa City Airlines · VL 2137 · FMO → MUC\\nAbflug 13:
+ 05 Uhr\, Ankunft 14:10 Uhr (Ortszeit)\\nVerkehrstag: Dienstag\\nQuelle: ht
+ tps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2
+ 026 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können s
+ ich ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-03-MUCFMO-LH2140@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261103T172000Z
+DTEND:20261103T183000Z
+SUMMARY:LH 2140 MUC→FMO
+DESCRIPTION:Lufthansa · LH 2140 · MUC → FMO\\nAbflug 18:20 Uhr\, Ankun
+ ft 19:30 Uhr (Ortszeit)\\nVerkehrstag: Dienstag\\nQuelle: https://www.fmo.
+ de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.
+ \\nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. K
+ eine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-03-FMOMUC-LH2141@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261103T191500Z
+DTEND:20261103T202500Z
+SUMMARY:LH 2141 FMO→MUC
+DESCRIPTION:Lufthansa · LH 2141 · FMO → MUC\\nAbflug 20:15 Uhr\, Ankun
+ ft 21:25 Uhr (Ortszeit)\\nVerkehrstag: Dienstag\\nQuelle: https://www.fmo.
+ de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2026 13:50 UTC.
+ \\nPlanmäßiger Flug – Zeiten und Durchführung können sich ändern. K
+ eine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-03-MUCFMO-VL2142@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261103T212000Z
+DTEND:20261103T223000Z
+SUMMARY:VL 2142 MUC→FMO
+DESCRIPTION:Lufthansa City Airlines · VL 2142 · MUC → FMO\\nAbflug 22:
+ 20 Uhr\, Ankunft 23:30 Uhr (Ortszeit)\\nVerkehrstag: Dienstag\\nQuelle: ht
+ tps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2
+ 026 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können s
+ ich ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-04-FMOMUC-VL2143@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261104T050500Z
+DTEND:20261104T061000Z
+SUMMARY:VL 2143 FMO→MUC
+DESCRIPTION:Lufthansa City Airlines · VL 2143 · FMO → MUC\\nAbflug 06:
+ 05 Uhr\, Ankunft 07:10 Uhr (Ortszeit)\\nVerkehrstag: Mittwoch\\nQuelle: ht
+ tps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2
+ 026 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können s
+ ich ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-04-MUCFMO-VL2138@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261104T140500Z
+DTEND:20261104T151500Z
+SUMMARY:VL 2138 MUC→FMO
+DESCRIPTION:Lufthansa City Airlines · VL 2138 · MUC → FMO\\nAbflug 15:
+ 05 Uhr\, Ankunft 16:15 Uhr (Ortszeit)\\nVerkehrstag: Mittwoch\\nQuelle: ht
+ tps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2
+ 026 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können s
+ ich ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-04-FMOMUC-VL2139@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261104T155500Z
+DTEND:20261104T170000Z
+SUMMARY:VL 2139 FMO→MUC
+DESCRIPTION:Lufthansa City Airlines · VL 2139 · FMO → MUC\\nAbflug 16:
+ 55 Uhr\, Ankunft 18:00 Uhr (Ortszeit)\\nVerkehrstag: Mittwoch\\nQuelle: ht
+ tps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2
+ 026 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können s
+ ich ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen Münster/Osnabrück (FMO)
+CATEGORIES:FMO-MUC
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-04-MUCFMO-VL2142@fmo-muc-schedule
+DTSTAMP:20261007T135005Z
+DTSTART:20261104T212000Z
+DTEND:20261104T223000Z
+SUMMARY:VL 2142 MUC→FMO
+DESCRIPTION:Lufthansa City Airlines · VL 2142 · MUC → FMO\\nAbflug 22:
+ 20 Uhr\, Ankunft 23:30 Uhr (Ortszeit)\\nVerkehrstag: Mittwoch\\nQuelle: ht
+ tps://www.fmo.de/muenchen/ (Flughafen Münster/Osnabrück)\, Stand 07.10.2
+ 026 13:50 UTC.\\nPlanmäßiger Flug – Zeiten und Durchführung können s
+ ich ändern. Keine Buchung\, keine Verfügbarkeit.
+LOCATION:Flughafen München (MUC)
+CATEGORIES:MUC-FMO
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR
