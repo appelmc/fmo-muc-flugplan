@@ -1,0 +1,54 @@
+name: FMO-MUC Flugplan
+
+# Erzeugt den Kalender-Feed (fmo-muc.ics) neu und legt ihn ins Repository.
+# GitHub Pages liefert ihn danach als oeffentliche URL aus.
+
+on:
+  schedule:
+    - cron: "17 4 * * *" # taeglich 04:17 UTC = 06:17 MESZ / 05:17 MEZ
+  workflow_dispatch: # erlaubt den manuellen Start ueber den "Run workflow"-Knopf
+  push:
+    branches: [main]
+
+permissions:
+  contents: write # noetig, damit der Job den Feed zurueck ins Repo schreiben darf
+
+concurrency:
+  group: fmo-muc-feed
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+
+      - name: Python einrichten
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Flugplan abrufen und ICS bauen
+        run: python build_fmo_ics.py --out fmo-muc.ics
+
+      - name: Feed pruefen
+        run: |
+          count=$(grep -c 'BEGIN:VEVENT' fmo-muc.ics || true)
+          echo "Events im Feed: $count"
+          if [ "$count" -lt 20 ]; then
+            echo "::error::Zu wenige Events - die Quelle hat sich vermutlich geaendert. Nichts wird ueberschrieben."
+            exit 1
+          fi
+
+      - name: ICS ins Repository schreiben
+        run: |
+          git config user.name  "fmo-muc-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add fmo-muc.ics
+          if git diff --cached --quiet; then
+            echo "Keine Aenderungen - Feed ist aktuell."
+          else
+            git commit -m "Flugplan aktualisiert ($(date -u +%Y-%m-%dT%H:%MZ))"
+            git push
+          fi
