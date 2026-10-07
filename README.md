@@ -14,8 +14,8 @@ zwischen Münster/Osnabrück (FMO) und München (MUC) – beide Richtungen.
   deshalb wird der lange Teil nicht abgeschnitten.
 - **Bestätigungsstufe:** Die ersten 14 Tage werden zusätzlich gegen die
   **Flugtafel des Flughafens München** geprüft (`munich-airport.com`). Flüge,
-  die dort für denselben Tag stehen, tragen im Titel `[bestätigt]` und in der
-  Terminbeschreibung den Flugzeugtyp; alle anderen bleiben unmarkiert.
+  die dort für denselben Tag stehen, tragen im Titel ein ✅; alle anderen
+  bleiben unmarkiert. Den Flugzeugtyp nennt die Tafel nur für den nächsten Tag.
 - **Aktualisierung:** täglich per GitHub Actions (`04:17 UTC`), Datei `fmo-muc.ics`
 - **Ohne Gewähr:** planmäßige Zeiten, keine Buchung, keine Verfügbarkeit.
   Weit in der Zukunft liegende Einträge sind der heutige Plan und ändern sich.
@@ -49,9 +49,23 @@ python3 build_fmo_ics.py --confirm-days 7 --out fmo-muc.ics  # kürzerer Airline
 ## Bestätigungsstufe (Flugtafel des Flughafens München)
 
 Die ersten 14 Tage werden gegen die Tagesansicht der Münchener Flugtafel
-geprüft — ein eigenes System, das aus dem Flugverkehr gespeist wird und je Flug
-auch den Flugzeugtyp trägt. Trifft der Flug dort für denselben Tag zu, steht im
-Titel `[bestätigt]`.
+geprüft — ein eigenes System, das aus dem Flugverkehr gespeist wird. Trifft der
+Flug dort für denselben Tag zu, steht ein **✅** am Ende des Termintitels:
+
+```
+LH 2143 FMO→MUC ✅
+```
+
+Das Zeichen ist frei wählbar, ohne den Code anzufassen:
+
+```bash
+python3 build_fmo_ics.py --marker "✓"      # schlichtes Häkchen
+python3 build_fmo_ics.py --marker "🟢"     # grüner Punkt
+python3 build_fmo_ics.py --marker " [LH]"  # wieder Text
+```
+
+Den Flugzeugtyp nennt die Tafel nur für den **nächsten Tag** (und dort nur auf
+der Abflugtafel); weiter voraus steht in den Terminen daher kein Muster.
 
 Keine Zugangsdaten, kein Konto. Zwei Eigenheiten der Tafel sind im Generator
 berücksichtigt: sie verlangt ein Cookie von der Startseite (ohne das antwortet
