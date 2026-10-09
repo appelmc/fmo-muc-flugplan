@@ -20,6 +20,7 @@ import argparse
 import datetime as dt
 import hashlib
 import http.cookiejar
+import pathlib
 import re
 import sys
 import time
@@ -54,6 +55,13 @@ TAG_RE = re.compile(r"<[^>]+>")
 TIME_RE = re.compile(r"(\d{2}:\d{2})")
 DATE_RE = re.compile(r"(\d{2}\.\d{2}\.\d{4})")
 FLIGHT_RE = re.compile(r"([A-Z0-9]{2}\s?\d{3,4})")
+
+# Tages-Tafel des FMO (/abflug-ankunft/): kennt auch den heutigen Tag.
+BOARD = "https://www.fmo.de/abflug-ankunft/"
+BOARD_ROW_RE = re.compile(r'<a([^>]*class="flight-list-item[^"]*"[^>]*)>(.*?)</a>', re.S)
+BOARD_NUM_RE = re.compile(r'flight-list-item-destination-number[^>]*>\s*([A-Z0-9]{2}\s?\d{3,4})', re.S)
+BOARD_TIME_RE = re.compile(r'flight-list-item-time[^"]*">(.*?)</div>', re.S)
+TAG_NAMEN = ("Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag")
 
 
 def _text(fragment: str) -> str:
@@ -100,6 +108,55 @@ def search_range(date_from: str, date_to: str) -> str:
     })
 
 
+def board_flights(day: dt.date, wann: str = "Today") -> list[dict]:
+    """Fluege eines Tages von der Tafel /abflug-ankunft/ (beide Richtungen).
+
+    Die Zeitsuche der Seite kennt den heutigen Tag nicht - sie beginnt immer bei
+    morgen. Die Tafel fuehrt dagegen Gestern/Heute/Morgen/Uebermorgen fertig
+    gerendert, je Zeile mit der planmaessigen Uhrzeit.
+    """
+    seite = fetch_page(BOARD)
+    fluege: list[dict] = []
+    for section, prefix, richtung in (("abflug", "departure", "out"), ("ankunft", "arrival", "in")):
+        start = seite.find(f'id="{section}"')
+        if start == -1:
+            continue
+        ende = seite.find('id="ankunft"' if section == "abflug" else "<footer", start)
+        abschnitt = seite[start:ende if ende > start else len(seite)]
+        marken = [(m.start(), m.group(1)) for m in
+                  re.finditer(r'<div class="' + prefix + r'(Yesterday|Today|Tomorrow|DayAfterTomorrow)"', abschnitt)]
+        block = ""
+        for i, (pos, name) in enumerate(marken):
+            if name == wann:
+                block = abschnitt[pos:(marken[i + 1][0] if i + 1 < len(marken) else len(abschnitt))]
+                break
+        if not block:
+            continue
+        for attrs, inhalt in BOARD_ROW_RE.findall(block):
+            if 'data-destination="MUC"' not in attrs:
+                continue
+            nummer = BOARD_NUM_RE.search(inhalt)
+            zeiten = BOARD_TIME_RE.search(inhalt)
+            if not (nummer and zeiten):
+                continue
+            zeit = TIME_RE.search(zeiten.group(1))
+            if not zeit:
+                continue
+            flug = re.sub(r"\s+", " ", nummer.group(1)).strip()
+            airline = "Lufthansa City Airlines" if flug.startswith("VL") else "Lufthansa"
+            fluege.append({
+                "date": day.isoformat(),
+                "dow": TAG_NAMEN[day.weekday()],
+                "dep": zeit.group(1) if richtung == "out" else "",
+                "arr": zeit.group(1) if richtung == "in" else "",
+                "airline": airline,
+                "flight": flug,
+                "from": "FMO" if richtung == "out" else "MUC",
+                "to": "MUC" if richtung == "out" else "FMO",
+            })
+    return fluege
+
+
 def month_chunks(start: dt.date, end: dt.date):
     """Monatsweise Abschnitte, damit die Antworten handlich bleiben."""
     cur = start
@@ -111,10 +168,22 @@ def month_chunks(start: dt.date, end: dt.date):
 
 
 def collect_flights(weeks: float = DEFAULT_WEEKS) -> list[dict]:
-    """Holt den Flugplan ab morgen fuer die angegebene Reichweite (Wochen)."""
-    start = dt.datetime.now(TZ).date() + dt.timedelta(days=1)
-    end = start + dt.timedelta(days=int(round(weeks * 7)))
+    """Holt den Flugplan ab HEUTE fuer die angegebene Reichweite (Wochen)."""
+    heute = dt.datetime.now(TZ).date()
+    # Die Zeitsuche kennt den heutigen Tag nicht - der kommt von der Tages-Tafel.
     flights: list[dict] = []
+    try:
+        heute_fluege = board_flights(heute, "Today")
+        if heute_fluege:
+            flights.extend(heute_fluege)
+            print(f"Tages-Tafel: {len(heute_fluege)} Fluege fuer heute ({heute}).")
+        else:
+            print("WARNUNG: Tages-Tafel lieferte keine Fluege fuer heute.", file=sys.stderr)
+    except Exception as exc:                            # noqa: BLE001
+        print(f"WARNUNG: Tages-Tafel nicht abrufbar ({exc}).", file=sys.stderr)
+
+    start = heute + dt.timedelta(days=1)
+    end = heute + dt.timedelta(days=int(round(weeks * 7)))
     fehler: list[str] = []
     for a, b in month_chunks(start, end):
         try:
@@ -318,23 +387,35 @@ def build_ics(flights: list[dict], keep_past: bool = False,
         if uid_key in seen:
             continue
         seen.add(uid_key)
-        if f["dep"]:
-            start = local_to_utc(f["date"], f["dep"])
+        key = (f["date"], f["from"], f["to"], flight_number_key(f["flight"]))
+        ist_bestaetigt = bool(confirmed) and key in confirmed
+        info = (zusatz or {}).get(key, {})
+
+        # Fehlende Zeit zuerst aus der Muenchener Tafel holen (die kennt beide
+        # Zeiten), erst danach aus der ueblichen Blockzeit ableiten.
+        dep, arr = f["dep"], f["arr"]
+        if ist_bestaetigt and info.get("times"):
+            zeiten = list(info["times"]) + ["", ""]
+            zeit_muc, zeit_other = zeiten[0], zeiten[1]
+            am_fmo = zeit_other if f["from"] == "FMO" else zeit_muc
+            am_muc = zeit_muc if f["from"] == "FMO" else zeit_other
+            dep = dep or am_fmo
+            arr = arr or am_muc
+
+        if dep:
+            start = local_to_utc(f["date"], dep)
         else:  # Auf der Ankunftstafel fehlt bei einem Teil der Fluege die Abflugzeit.
-            start = local_to_utc(f["date"], f["arr"]) - dt.timedelta(minutes=block)
-        if f["arr"]:
-            end = local_to_utc(f["date"], f["arr"])
+            start = local_to_utc(f["date"], arr) - dt.timedelta(minutes=block)
+        if arr:
+            end = local_to_utc(f["date"], arr)
         else:
             end = start + dt.timedelta(minutes=block)
         if end <= start:                      # Ankunft nach Mitternacht
             end += dt.timedelta(days=1)
-        abflug = (f'{f["dep"]} Uhr' if f["dep"] else
+        abflug = (f'{dep} Uhr' if dep else
                   f'ca. {start.astimezone(TZ).strftime("%H:%M")} Uhr (nicht veröffentlicht, abgeleitet)')
-        ankunft = (f'{f["arr"]} Uhr' if f["arr"] else
+        ankunft = (f'{arr} Uhr' if arr else
                    f'ca. {end.astimezone(TZ).strftime("%H:%M")} Uhr (nicht veröffentlicht, abgeleitet)')
-        key = (f["date"], f["from"], f["to"], flight_number_key(f["flight"]))
-        ist_bestaetigt = bool(confirmed) and key in confirmed
-        info = (zusatz or {}).get(key, {})
         uid = f"{uid_key}@fmo-muc-schedule"
         summary = f'{f["flight"]} {f["from"]}→{f["to"]}' + (f" {mark}" if ist_bestaetigt else "")
         bestaetigung = ""
@@ -381,6 +462,47 @@ def build_ics(flights: list[dict], keep_past: bool = False,
     return "\r\n".join(header + body + ["END:VCALENDAR", ""])
 
 
+def _unfold(ics: str) -> str:
+    """Zeilenfaltung des ICS rueckgaengig machen."""
+    return ics.replace("\r\n ", "").replace("\n ", "")
+
+
+def vevent_blocks(ics: str) -> list[str]:
+    return re.findall(r"BEGIN:VEVENT.*?END:VEVENT", _unfold(ics), re.S)
+
+
+def carry_previous(neu: str, alt: str, ab: dt.date) -> tuple[str, int]:
+    """Termine des Vortags aus dem bisherigen Feed uebernehmen.
+
+    Ohne diesen Schritt faellt der heutige Tag beim taeglichen Neuaufbau aus dem
+    Kalender: die Zeitsuche der Quelle kennt den heutigen Tag nicht. Der alte
+    Stand bleibt so lange stehen, bis er aelter als einen Tag ist.
+    """
+    vorhanden = {m for block in vevent_blocks(neu) for m in re.findall(r"UID:(\S+)", block)}
+    uebernommen: list[str] = []
+    for block in vevent_blocks(alt):
+        uid = re.search(r"UID:(\S+)", block)
+        if not uid or uid.group(1) in vorhanden:
+            continue
+        kennung = uid.group(1)
+        treffer = re.match(r"(\d{4}-\d{2}-\d{2})-", kennung)
+        if treffer:
+            tag = dt.date.fromisoformat(treffer.group(1))
+        else:
+            start = re.search(r"DTSTART(?:;[^:]*)?:(\d{8})", block)
+            if not start:
+                continue
+            tag = dt.date(int(start.group(1)[:4]), int(start.group(1)[4:6]), int(start.group(1)[6:8]))
+        if tag < ab:
+            continue
+        vorhanden.add(kennung)
+        uebernommen.append(block)
+    if not uebernommen:
+        return neu, 0
+    zeilen = [fold(zeile) for block in uebernommen for zeile in block.splitlines()]
+    return neu.replace("END:VCALENDAR", "\r\n".join(zeilen) + "\r\nEND:VCALENDAR", 1), len(uebernommen)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default="fmo-muc.ics")
@@ -404,6 +526,16 @@ def main() -> int:
 
     ics = build_ics(flights, keep_past=args.keep_past, confirmed=confirmed, zusatz=zusatz,
                     mark=args.marker)
+
+    # Vortag aus dem bisherigen Feed behalten (kein Loch um Mitternacht).
+    ziel = pathlib.Path(args.out)
+    if ziel.exists():
+        ics, uebernommen = carry_previous(ics, ziel.read_text(encoding="utf-8"),
+                                          dt.datetime.now(TZ).date() - dt.timedelta(days=1))
+        if uebernommen:
+            print(f"Vortag uebernommen: {uebernommen} Termine aus dem bisherigen Feed "
+                  "(aeltere werden verworfen).")
+
     with open(args.out, "w", encoding="utf-8", newline="") as fh:
         fh.write(ics)
     days = sorted({f["date"] for f in flights})
