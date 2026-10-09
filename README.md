@@ -9,9 +9,13 @@ zwischen Münster/Osnabrück (FMO) und München (MUC) – beide Richtungen.
   abgefragt und liefert rund ein Jahr voraus.
 - **Inhalt:** Flugnummer, Marke (Lufthansa / Lufthansa City Airlines),
   Abflug- und Ankunftszeit, Verkehrstag
-- **Reichweite:** maximales Fenster, ab morgen rund ein Jahr (änderbar über `--weeks N`).
+- **Reichweite:** maximales Fenster, ab heute rund ein Jahr (änderbar über `--weeks N`).
   Je weiter voraus, desto unsicherer – es ist überall dieselbe Planungsquelle,
   deshalb wird der lange Teil nicht abgeschnitten.
+- **Heute und gestern:** Den heutigen Tag liefert die Tages-Tafel
+  (`fmo.de/abflug-ankunft/`) – die Zeitsuche kennt ihn nicht. Der Vortag bleibt
+  zusätzlich einen Tag im Feed, damit der Kalender morgens kein Loch bekommt und
+  erst danach ausläuft.
 - **Bestätigungsstufe:** Die ersten 14 Tage werden zusätzlich gegen die
   **Flugtafel des Flughafens München** geprüft (`munich-airport.com`). Flüge,
   die dort für denselben Tag stehen, tragen im Titel ein ✅; alle anderen
