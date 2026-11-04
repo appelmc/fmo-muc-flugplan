@@ -34,6 +34,38 @@ DEFAULT_WEEKS = 52  # maximales Fenster: die Quelle ist ueberall dieselbe
 CONFIRM_DAYS = 14   # nur die ersten zwei Wochen werden gegen MUC gegengeprueft
 CONFIRMED_MARK = "✅"  # Kennzeichen im Termintitel (aenderbar per --marker)
 
+# fmo.de ist seit Anfang November 2026 im Umbau: unter derselben Adresse
+# wechseln sich die echte Flugplan-Anwendung und eine Wartungsplatzseite ab
+# (HTTP 200, ~16 kB, Wort "Wartungsarbeiten", ohne id="abflug"/"ankunft").
+# Beide Abrufwege (GET und POST) sind betroffen, deshalb wird jeder Abruf
+# mehrfach versucht, bevor er als Fehler zaehlt.
+FMO_VERSUCHE = 3          # Versuche je Abruf
+FMO_PAUSE = 30.0          # Wartezeit vor einem neuen Versuch in Sekunden
+WARTUNGS_MARKER = "Wartungsarbeiten"
+WARTUNGS_HINWEIS = "in Kürze wieder"   # zweiter Satz der Platzhalterseite
+WARTUNGS_MAX_BYTES = 40_000            # Platzhalterseite ~16 kB, echte Seiten 70-294 kB
+
+
+class Wartungsseite(RuntimeError):
+    """fmo.de hat die Wartungsplatzseite statt der Flugplan-Anwendung geliefert."""
+
+
+def ist_wartungsseite(html: str) -> bool:
+    """Erkennt die Wartungsplatzseite von fmo.de.
+
+    Hauptkriterium ist der Wortlaut der Seite ("Aktuell werden geplante
+    Wartungsarbeiten durchgefuehrt ... FMO.de steht Ihnen in Kuerze wieder im
+    gewohnten Umfang zur Verfuegung"). Zusaetzlich gilt eine kleine Antwort
+    ohne die Anker der Flugplan-Tabs als Platzhalterseite. Eine grosse Seite
+    ohne diese Anker ist dagegen eine echte Strukturaenderung und wird hier
+    bewusst nicht als Wartung gewertet.
+    """
+    if WARTUNGS_MARKER in html or WARTUNGS_HINWEIS in html:
+        return True
+    ohne_anker = 'id="abflug"' not in html and 'id="ankunft"' not in html
+    return ohne_anker and len(html) < WARTUNGS_MAX_BYTES
+
+
 # Flugtafel des Flughafens Muenchen (Zweitquelle, kein Schluessel noetig).
 MUC_BOARD = "https://www.munich-airport.com/flightsearch/{direction}"
 MUC_HEADERS = {
@@ -74,12 +106,8 @@ def flight_number_key(flight: str) -> str:
     return digits.lstrip("0") or digits
 
 
-def fetch_page(url: str = SOURCE, data: dict | None = None) -> str:
-    """GET auf die Seite oder POST der Flugsuche mit eigenem Zeitraum.
-
-    Das Suchformular (POST, multipart, ohne Token) gibt jeden Zeitraum heraus -
-    die Flugplandaten reichen mindestens bis Oktober 2027.
-    """
+def _abrufen(url: str, data: dict | None) -> str:
+    """Ein einzelner Abruf der FMO-Seite (GET oder POST), ohne Wiederholung."""
     if data is None:
         req = urllib.request.Request(url, headers={"User-Agent": UA})
     else:
@@ -96,6 +124,36 @@ def fetch_page(url: str = SOURCE, data: dict | None = None) -> str:
         })
     with urllib.request.urlopen(req, timeout=90) as r:
         return r.read().decode("utf-8", "replace")
+
+
+def fetch_page(url: str = SOURCE, data: dict | None = None,
+               versuche: int = FMO_VERSUCHE) -> str:
+    """GET auf die Seite oder POST der Flugsuche mit eigenem Zeitraum.
+
+    Das Suchformular (POST, multipart, ohne Token) gibt jeden Zeitraum heraus -
+    die Flugplandaten reichen mindestens bis Oktober 2027.
+
+    Waehrend der Umbauphase bei fmo.de liefert derselbe Aufruf abwechselnd die
+    Wartungsplatzseite und die echte Anwendung. Deshalb wird bis zu `versuche`
+    mal mit Pause wiederholt; erst danach gilt der Abruf als Fehler
+    (Wartungsseite). GET und POST sind gleichermassen betroffen.
+    """
+    letzte = ""
+    for versuch in range(1, max(1, versuche) + 1):
+        html = _abrufen(url, data)
+        if not ist_wartungsseite(html):
+            return html
+        letzte = html
+        if versuch < versuche:
+            print(f"WARTUNG: fmo.de liefert die Wartungsseite statt der "
+                  f"Flugplan-Anwendung (Versuch {versuch}/{versuche}, "
+                  f"{len(html)} Bytes) - neuer Versuch in {FMO_PAUSE:.0f} s.",
+                  file=sys.stderr)
+            time.sleep(FMO_PAUSE)
+    raise Wartungsseite(
+        f"Wartungsseite statt Flugplan: nach {versuche} Versuchen nur die "
+        f"Wartungsplatzseite erhalten ({len(letzte)} Bytes, "
+        f"kein id=\"abflug\"/\"ankunft\").")
 
 
 def search_range(date_from: str, date_to: str) -> str:
@@ -116,6 +174,15 @@ def board_flights(day: dt.date, wann: str = "Today") -> list[dict]:
     gerendert, je Zeile mit der planmaessigen Uhrzeit.
     """
     seite = fetch_page(BOARD)
+    if ist_wartungsseite(seite):
+        # fetch_page wiederholt bereits; hier landet nur die Dauerwartung.
+        raise Wartungsseite(
+            "Wartungsseite statt Flugplan: auch die Tages-Tafel /abflug-ankunft/ "
+            "liefert nur die Platzhalterseite.")
+    if not all(f'id="{abschnitt}"' in seite for abschnitt in ("abflug", "ankunft")):
+        raise RuntimeError(
+            "Struktur der Tages-Tafel /abflug-ankunft/ hat sich geaendert: "
+            "Abschnitte 'abflug'/'ankunft' nicht gefunden.")
     fluege: list[dict] = []
     for section, prefix, richtung in (("abflug", "departure", "out"), ("ankunft", "arrival", "in")):
         start = seite.find(f'id="{section}"')
@@ -185,7 +252,8 @@ def collect_flights(weeks: float = DEFAULT_WEEKS) -> list[dict]:
     start = heute + dt.timedelta(days=1)
     end = heute + dt.timedelta(days=int(round(weeks * 7)))
     fehler: list[str] = []
-    for a, b in month_chunks(start, end):
+    abschnitte = list(month_chunks(start, end))
+    for a, b in abschnitte:
         try:
             page = search_range(a.isoformat(), b.isoformat())
             out_block, in_block = split_directions(page)
@@ -194,12 +262,15 @@ def collect_flights(weeks: float = DEFAULT_WEEKS) -> list[dict]:
                 fehler.append(f"{a}..{b}: keine Fluege erkannt")
             flights.extend(teil)
         except Exception as exc:                       # noqa: BLE001 - Teilausfall tolerieren
+            # Faengt auch Wartungsseite: ein einzelner Wartungstreffer kostet
+            # nur diesen Monatsabschnitt, der Lauf laeuft weiter.
             fehler.append(f"{a}..{b}: {exc}")
         time.sleep(1)
     if not flights:
         raise SystemExit("FEHLER: keine Flugdaten von fmo.de erhalten - " + "; ".join(fehler))
     if fehler:
-        print("WARNUNG (Teilausfaelle): " + "; ".join(fehler), file=sys.stderr)
+        print(f"WARNUNG ({len(fehler)} von {len(abschnitte)} Monatsabschnitten "
+              "ausgefallen): " + "; ".join(fehler), file=sys.stderr)
     return flights
 
 
@@ -272,7 +343,11 @@ def confirm_against_muc(flights: list[dict], days: int) -> tuple[set, dict, str]
     bestaetigt: set = set()
     zusatz: dict = {}
     fehler: list[str] = []
-    opener = muc_opener()
+    try:
+        opener = muc_opener()
+    except Exception as exc:                            # noqa: BLE001
+        # Nur die Gegenprobe faellt aus, nicht der ganze Lauf.
+        return set(), {}, f"Sitzung der Muenchener Tafel nicht aufgebaut ({exc})"
     for tag in tage:
         d = dt.date.fromisoformat(tag)
         for direction, von, nach in (("arrivals", "FMO", "MUC"), ("departures", "MUC", "FMO")):
@@ -291,11 +366,21 @@ def confirm_against_muc(flights: list[dict], days: int) -> tuple[set, dict, str]
 
 
 def split_directions(html: str) -> tuple[str, str]:
-    """Trennt die Seite in Abflug- (FMO->MUC) und Ankunftsblock (MUC->FMO)."""
+    """Trennt die Seite in Abflug- (FMO->MUC) und Ankunftsblock (MUC->FMO).
+
+    Wirft bewusst eine gewoehnliche Ausnahme: `collect_flights()` faengt sie je
+    Monatsabschnitt ab, damit ein einzelner Wartungstreffer nur diesen Abschnitt
+    kostet und die uebrigen Monate weiterlaufen. Ein `SystemExit` waere
+    `BaseException`, wuerde dort nicht gefangen und risse den ganzen Lauf ab.
+    """
     out_idx = html.find('id="abflug"')
     in_idx = html.find('id="ankunft"')
     if out_idx == -1 or in_idx == -1 or in_idx < out_idx:
-        raise SystemExit("Struktur der FMO-Seite hat sich geaendert: Tabs 'abflug'/'ankunft' nicht gefunden.")
+        if ist_wartungsseite(html):
+            raise Wartungsseite(
+                "Wartungsseite statt Flugplan: die Antwort enthaelt kein "
+                "id=\"abflug\"/\"ankunft\" und keine Flugplan-Tabs.")
+        raise RuntimeError("Struktur der FMO-Seite hat sich geaendert: Tabs 'abflug'/'ankunft' nicht gefunden.")
     return html[out_idx:in_idx], html[in_idx:]
 
 

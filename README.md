@@ -39,6 +39,7 @@ https://<BENUTZERNAME>.github.io/<REPO>/fmo-muc.ics
 |---|---|
 | `build_fmo_ics.py` | Holt den Flugplan (POST, monatsweise), parst beide Richtungen, gleicht die ersten 14 Tage gegen Lufthansa ab, schreibt das ICS – nur Python-Standardbibliothek |
 | `test_bestaetigung.py` | Selbsttest für XML-Parser und `[bestätigt]`-Markierung – läuft ohne Zugangsdaten |
+| `test_wartung.py` | Selbsttest für die Wartungs-Erkennung und die Wiederholung – läuft ohne Netz, nutzt die Belege in `tests/fixtures/` |
 | `.github/workflows/update-feed.yml` | Erzeugt den Feed täglich neu und committet ihn |
 | `fmo-muc.ics` | Der erzeugte Kalender – wird vom Workflow geschrieben, nicht von Hand gepflegt |
 
@@ -85,6 +86,47 @@ Die Lufthansa Open API wäre die Airline selbst, ist aber derzeit nicht
 nutzbar: „Registration to OpenAPI is on hold until further notice"
 (developer.lufthansa.com, Stand 07.10.2026).
 
+## Wenn die Quelle in Wartung ist (Wartungsplatzseite statt Flugplan)
+
+Seit Anfang November 2026 ist `fmo.de` im Umbau. Unter derselben Adresse
+antworten abwechselnd zwei Systeme: die echte Flugplan-Anwendung und eine
+**Wartungsplatzseite** (HTTP 200, rund 16 kB, „Aktuell werden geplante
+Wartungsarbeiten durchgeführt … FMO.de steht Ihnen in Kürze wieder im gewohnten
+Umfang zur Verfügung"). Betroffen sind GET **und** POST, am 04.11.2026 gemessen
+im Verhältnis grob 2 echte zu 3 Wartungsantworten.
+
+Darauf ist der Generator eingestellt:
+
+- **Erkennung:** Hinweistext der Platzhalterseite; zusätzlich gilt eine kleine
+  Antwort ohne die Anker `id="abflug"`/`id="ankunft"` als Wartungsseite.
+- **Wiederholung:** Jeder Abruf wird bis zu **3-mal** versucht, dazwischen
+  **30 s** Pause (`FMO_VERSUCHE`, `FMO_PAUSE`). Erst danach gilt er als Fehler –
+  und dann mit klarer Ursache („Wartungsseite statt Flugplan …"), nicht mit
+  „Struktur hat sich geändert".
+- **Teilausfall bricht den Lauf nicht ab:** Das gilt auch für die Tages-Tafel und
+  die Gegenprobe gegen München. Ein betroffener Monatsabschnitt landet in der
+  Fehlerliste, die übrigen Monate laufen weiter; die Warnzeile nennt Anzahl und
+  Abschnitte.
+- **Nichts wird still überschrieben:** Kommt gar nichts Echtes zurück, endet der
+  Lauf mit Fehler, bevor eine Datei geschrieben wird – der letzte gute Feed
+  bleibt stehen. Dasselbe erreicht die Mindestzahl-Prüfung im Workflow.
+- **Keine Lücke bei Teilausfall:** Fällt ein Monatsabschnitt aus, holt der Schritt
+  „Vortag übernehmen" die fehlenden Termine aus dem bisherigen Feed zurück
+  (alles ab gestern, was im neuen Feed fehlt). Der veröffentlichte Kalender
+  verliert dadurch keinen Monat, solange den Lauf mindestens ein Abschnitt
+  gelingt. Am 04.11.2026 real geprüft: 7 von 13 Abschnitten fielen aus, der
+  erzeugte Feed hatte 1.213 Termine, nach der Übernahme 2.552.
+
+Der Parser selbst ist unverändert: Die neue Seite ist strukturgleich, die
+Abflug-/Ankunftsblöcke und das POST-Formular funktionieren wie vorher.
+
+Prüfen ohne Netz (Belege in `tests/fixtures/`, echter Wartungsauszug und ein
+echter Seitenausschnitt):
+
+```bash
+python3 test_wartung.py
+```
+
 ## Hinweis zur Quelle
 
 Nicht jede Zeile trägt beide Uhrzeiten: Auf der Abflugtafel fehlt bei einem
@@ -92,4 +134,6 @@ Teil der Flüge die Ankunft (`Ankunft N/A`), auf der Ankunftstafel umgekehrt der
 Abflug. Der Generator verwirft solche Zeilen nicht, sondern leitet die fehlende
 Zeit aus der üblichen Blockzeit ab und kennzeichnet sie im Termin als
 abgeleitet. Ändert der Flughafen seine Seitenstruktur, bricht der Lauf mit
-Fehler ab, statt einen leeren Kalender zu veröffentlichen.
+Fehler ab, statt einen leeren Kalender zu veröffentlichen. Die Wartungsphase
+wird davon unterschieden: sie wird zuerst durch Wiederholung überbrückt und
+erst dann – mit eigener Ursachenzeile – als Fehler gemeldet.
