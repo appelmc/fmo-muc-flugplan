@@ -48,7 +48,22 @@ jobs:
           git add fmo-muc.ics
           if git diff --cached --quiet; then
             echo "Keine Aenderungen - Feed ist aktuell."
-          else
-            git commit -m "Flugplan aktualisiert ($(date -u +%Y-%m-%dT%H:%MZ))"
-            git push
+            exit 0
           fi
+          git fetch origin main
+          # Waechter: hat sich origin/main waehrend des Laufs ausserhalb des Feeds geaendert?
+          if ! git diff --quiet origin/main -- . ':(exclude)fmo-muc.ics'; then
+            echo "::error::origin/main hat sich waehrend des Laufs geaendert (andere Dateien) - nichts wird geschrieben, naechster Lauf uebernimmt."
+            exit 1
+          fi
+          # Der Feed wird erzeugt, nicht gepflegt: der eigene Stand ersetzt den
+          # fremden, statt mit ihm verschmolzen zu werden. Ein Rebase scheiterte
+          # hier mit "could not apply ..." und machte den Lauf rot, obwohl der
+          # Feed fertig gebaut war.
+          git reset --soft origin/main
+          if git diff --cached --quiet; then
+            echo "Keine Aenderungen - der neue Feed entspricht bereits origin/main."
+            exit 0
+          fi
+          git commit -m "Flugplan aktualisiert ($(date -u +%Y-%m-%dT%H:%MZ))"
+          git push origin HEAD:main
